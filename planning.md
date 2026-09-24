@@ -16,8 +16,8 @@ Problem Formulation: Break down the project prompt. Clearly define the input par
 **Baseline Solutions: Design a simple algorithm that solves the problem to serve as a reference point for performance comparisons.**
 To establish a functional baseline, we can implement a naive pairing strategy. This approach simply iterates through the list of files and pairs two smallest files together, before readding it to the list.
 
-```
 Input - list of file size n
+```
 Def base_solution(input)
 	Files = n
 	Computing cost = 0
@@ -58,32 +58,33 @@ Def heap_push(files, file_to_add): #takes O(n) = log base(2) of (n)
 Def heap_pop(files): # should be O(n) = log base(2) of (n)
 	Result = files[0]
 	Files[0] = files[-1]
-Index = 0
-While True: # this is like a tree and the value is moving down. Thus the most it can move down is log base(2) of n
-	Child1 = index*2 +1
-	Child2 = index*2 +2
-Smallest = index
-If left is in bounds and is smaller than files[smallest]:
-	Smallest = left
-If right is in bounds and smaller than files[smallest]:
-	Smallest = right
-If smallest == index:
-	Break
-
-Files[index], files[smallest] = files[smallest], files[index]
-Index = smallest
-		Return result
+	files.pop()
+	Index = 0
+	While True: # this is like a tree and the value is moving down. Thus the most it can move down is log base(2) of n
+		Child1 = index*2 +1
+		Child2 = index*2 +2
+	Smallest = index
+	If left is in bounds and is smaller than files[smallest]:
+		Smallest = left
+	If right is in bounds and smaller than files[smallest]:
+		Smallest = right
+	If smallest == index:
+		Break
+	
+	Files[index], files[smallest] = files[smallest], files[index]
+	Index = smallest
+			Return result
 
 Def main(files):
 	Heap_files = []
-for file in files: # runs n times
-	heap_push(heap_files, file)
-Computing_cost = 0
-While len(heap_files) > 1: # should run n - 1 times
-	New_file = heap_pop(Heap_files) + heap_pop(Heap_files)
-	Computing_cost += new_file
-	heap_push(heap_files, new_file)
-Return computing_cost
+	for file in files: # runs n times
+		heap_push(heap_files, file)
+	Computing_cost = 0
+	While len(heap_files) > 1: # should run n - 1 times
+		New_file = heap_pop(Heap_files) + heap_pop(Heap_files)
+		Computing_cost += new_file
+		heap_push(heap_files, new_file)
+	Return computing_cost
 ```
 
 
