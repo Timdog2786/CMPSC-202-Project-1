@@ -1,5 +1,6 @@
 from time import perf_counter
 import random
+import matplotlib.pyplot as plt
 
 def base_solution(files):
     computing_cost = 0
@@ -119,10 +120,20 @@ def main():
              t_end = perf_counter()
              t_difference += t_end - t_start
         heap_times.append(t_difference/10)
-        
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(tests, benchmark_times, marker="o", label="Baseline algorithm")
+    plt.plot(tests, heap_times, marker="o", label="Algorithmic strategy")
+    plt.xlabel("Input size")
+    plt.ylabel("Time (seconds)")
+    plt.title("Algorithm Runtime Comparison")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
     print(benchmark_times, heap_times)
     # THAT SHOULD BE THE DATA YOU NEED FOR YOUR GRAPHS
+    # Worked great thanks
     
 
 if __name__ == "__main__":
