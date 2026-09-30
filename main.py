@@ -131,6 +131,18 @@ def main():
     plt.grid(True)
     plt.show()
 
+    plt.figure(figsize=(10, 6))
+    plt.yscale('log')
+    plt.plot(tests, benchmark_times, marker="o", label="Baseline algorithm")
+    plt.plot(tests, heap_times, marker="o", label="Algorithmic strategy")
+    plt.xlabel("Input size")
+    plt.ylabel("Time (seconds)")
+    plt.title("Algorithm Runtime Comparison (Log scale)")
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+
+
     print(benchmark_times, heap_times)
     # THAT SHOULD BE THE DATA YOU NEED FOR YOUR GRAPHS
     # Worked great thanks
