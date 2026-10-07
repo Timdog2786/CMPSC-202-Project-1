@@ -1,5 +1,5 @@
 ## Empirical Synthesis: 
-We created visualizations using our benchmarking data. This data shows that our algorithmic soulution scales at a faster rate proving that our algoritm grows faster then $O(n^2)$ that our basline runs at. 
+We created visualizations using our benchmarking data. This data shows that our algorithmic soulution scales at a faster rate proving that our algoritm scales at a slower rate then $O(n^2)$ that our basline runs at. 
 
 | ![Benchmark Plot (Linear Scale)](Figure_1.png) | ![Benchmark Plot (Log Scale)](Figure_2.png) |
 |---|---|
