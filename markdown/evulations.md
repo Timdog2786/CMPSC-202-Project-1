@@ -10,7 +10,7 @@ Unit testing (`main.py`) confirms that both algorithms return the correct minimu
 ## Benchmarking Results
 We compare the performance of our two algorithms on randomly generated arrays, with varying input size ($n$) from 10 to 50,000 files, with each file being between 1 and 1000 We present the results in the plots below. The left plot shows the execution time on a linear scale, while the right plot uses a logarithmic scale for both axes.
 
-| ![Benchmark Plot (Linear Scale)](benchmark_plot.png) | ![Benchmark Plot (Log Scale)](benchmark_plot_log.png) |
+| ![Benchmark Plot (Linear Scale)](Figure_1.png) | ![Benchmark Plot (Log Scale)](Figure_2.png) |
 |---|---|
 
 The empirical data aligns with our theoretical complexity analysis (`planning.md`):
