@@ -92,7 +92,7 @@ def compute_cost(files):
 
 def list_generater(length, min = 1, max = 1000, seed = None):
     if seed is not None:
-         random.seed = seed
+         random.seed(seed)
     L = []
     for _ in range(length):
         L.append(random.randint(min, max))
