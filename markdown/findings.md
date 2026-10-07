@@ -1,11 +1,11 @@
 ## Empirical Synthesis: 
-We created visualizations using our benchmarking data. This data shows that our algorithmic soulution scales at a faster rate proving that our algoritm scales at a slower rate then $O(n^2)$ that our basline runs at. 
+We created visualizations using our benchmarking data. These visualizations show that our algorithm scales more slowly than the $O(n^2)$ baseline, demonstrating improved performance as the input size increases.
 
 | ![Benchmark Plot (Linear Scale)](Figure_1.png) | ![Benchmark Plot (Log Scale)](Figure_2.png) |
 |---|---|
 
 ## Baseline Comparison: 
-From our algorthimic analyisis we can onbserve how our soulution scales at a slower rate then our basline proving visualy that our runtime has improved from out basline. This comparison dirrectly shows that through mathmatical selection you can imporve a algorithims runtime from testing every soulution. 
+Our algorithmic analysis shows that our solution scales more slowly than the baseline, visually demonstrating an improvement in runtime. This comparison shows how choosing a more efficient mathematical approach can improve an algorithm's performance compared with testing every possible solution.
 
 
 ## Reflection: 
